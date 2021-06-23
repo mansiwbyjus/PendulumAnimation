@@ -1,0 +1,33 @@
+#bodyId{background-color: rgba(188, 191, 196, 0.534);font-family: 'Bebas Neue'}
+.parent-div{
+  width:100%;
+  height: 100%;
+  top:0;
+  left: 0;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+#canvas{
+  display: inline;
+  position: absolute;
+  margin-left:0px;
+  border: 0.0px solid black;
+  background-color: #DEFFB4;
+  overflow:auto;
+ 
+}
+
+.child-div{
+  width:177.78vh;
+  height: 100vh;
+  position: absolute;
+  margin-left:0px;
+  border: 0.0px solid black;
+  background-color: #DEFFB4;
+  overflow: auto;
+ 
+}

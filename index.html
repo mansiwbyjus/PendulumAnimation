@@ -11,8 +11,21 @@
   </head>
   <body id="bodyId">
       <div class="parent-div">
-        <div class="child-div"> 
-          <canvas id="Canvas1"  style="border: 0.1px solid black;"></canvas>
+        <div class="child-div">
+
+          <div class="slidecontainer" id="Lslider">
+            <p>Bob Length:</p>
+            <input type="range" id="bobLength" min="1" max="10" value="5" >
+          </div>
+
+          <div class="slidecontainer" id="Mslider">
+            <p>Bob Mass:</p>
+            <input type="range" id="bobMass" min="1" max="20" value="10">
+          </div>
+
+          <div class="center">
+            <canvas id="Canvas1"  style="border: 0px solid black;"></canvas>
+          </div> 
 
         </div>
       </div>   

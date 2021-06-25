@@ -88,6 +88,8 @@ canvas1.height= window.innerHeight*0.99;
         console.log(bobRadius);
         document.getElementById("bobMassValue").innerHTML= bobRadius;
     }
+
+   
     
 
     async function animation(){
@@ -115,11 +117,14 @@ canvas1.height= window.innerHeight*0.99;
              ctx1.arc(transX(bobPosX),transY(bobPosY),bobRadius,0,2*Math.PI);  
             ctx1.stroke();
             ctx1.fill();
+            
+            T =(2* Math.PI)*Math.sqrt(bobLength/g);
+            f=1/T;
+            document.getElementById("frequency").innerHTML= "Frequency : " +f +" H";    
 
             }
     
     }
 
-
-
      animation();
+     

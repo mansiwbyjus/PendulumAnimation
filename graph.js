@@ -8,7 +8,39 @@ var t=0;
 
 var xValues = [];
 var yValues = [];
+
+
+var sliderL = document.getElementById("bobLength");
+sliderL.oninput = function () {
+    bobLength = sliderL.value;
+    console.log(bobLength);
+    document.getElementById("bobLengthVal").innerHTML = bobLength;
+}
+
+var sliderM = document.getElementById("bobMass");
+sliderM.oninput = function () {
+    bobRadius = sliderM.value;
+    console.log(bobRadius);
+    document.getElementById("bobMassValue").innerHTML = bobRadius;
+}
+
+
+var sliderT = document.getElementById("theta");
+sliderT.oninput = function () {
+    angle = sliderT.value;
+    console.log(angle);
+    document.getElementById("thetaValue").innerHTML = angle;
+    theta0= degrees_to_radians(angle);
+}
+
+function degrees_to_radians(degrees) {
+    var pi = Math.PI;
+    return degrees * (pi / 180);
+}
+
+
 generateData("A*Math.cos(theta/2)", t, 10, 0.01);
+animation();
 
 new Chart("myChart", {
   type: "line",

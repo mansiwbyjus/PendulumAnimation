@@ -31,7 +31,7 @@
 
   #frequency{
     position:absolute;
-    margin-top: 32vh;
+    margin-top: 45vh;
     margin-left: 5vh;
     padding-top: 2vh;
     text-align:center;
@@ -52,7 +52,7 @@ margin-left: 5vh;
 margin-top: 5vh;
 z-index: 1;
 width:30vh;
-height:25vh;
+height:35vh;
 }
 
 
@@ -95,6 +95,12 @@ height:25vh;
   left: 30px;
   top: 70px;
   
+}
+
+#Tslider{
+  position: absolute;
+  left: 30px;
+  top: 20vh;
 }
 
 

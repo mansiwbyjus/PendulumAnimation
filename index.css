@@ -19,6 +19,18 @@
   overflow:auto;
 }
 
+#myChart{
+  position:absolute;
+  width: 30vh;
+  height: 30vh;
+  right: 0;
+  top: 40px;
+  margin-right: 5vh;
+  z-index: 1;
+  background-color: white;
+  border-radius: 1vh;
+  }
+
 .sliders{
 border: 5px;
 position:absolute;

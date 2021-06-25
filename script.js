@@ -120,7 +120,7 @@ canvas1.height= window.innerHeight*0.99;
             
             T =(2* Math.PI)*Math.sqrt(bobLength/g);
             f=1/T;
-            document.getElementById("frequency").innerHTML= "Frequency : " +f +" H";    
+            document.getElementById("frequency").innerHTML= "Frequency : " +f.toFixed(3) +" Hz";    
 
             }
     

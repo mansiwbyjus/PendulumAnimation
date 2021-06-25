@@ -1,6 +1,6 @@
 var canvas1 = document.getElementById("Canvas1");
-canvas1.width= window.innerHeight*(16/9)*0.97;
-canvas1.height= window.innerHeight*0.96;
+canvas1.width= window.innerHeight*(16/9)*0.99;
+canvas1.height= window.innerHeight*0.99;
    //setting graph's ranges
    var xMin=-10;
    var xMax=10 ;
@@ -65,11 +65,11 @@ canvas1.height= window.innerHeight*0.96;
     var bobLength = 7;
     var bobRadius=10;
     var g=9.8;
-    //var T =(2* Math.PI)*Math.sqrt(bobLength/g);
+    var T =(2* Math.PI)*Math.sqrt(bobLength/g);
     var t=0;
     var theta0 = (Math.PI/18);
     var theta;
-   // var f= 1/T;
+    var f= 1/T;
     var A;
     var bobPosX=0;
     var bobPosY= -7;
@@ -79,17 +79,16 @@ canvas1.height= window.innerHeight*0.96;
     sliderL.oninput=function(){
         bobLength =sliderL.value;
         console.log(bobLength);
-        //document.getElementById("Lslider").innerHTML= sliderL.value
+        document.getElementById("bobLengthVal").innerHTML= bobLength;
     }
-    function updateTextInput(val) {
-        document.getElementById('textInput').value=val; 
-      }
 
     var sliderM =document.getElementById("bobMass");
     sliderM.oninput=function(){
         bobRadius =sliderM.value;
         console.log(bobRadius);
+        document.getElementById("bobMassValue").innerHTML= bobRadius;
     }
+    
 
     async function animation(){
         while(true){

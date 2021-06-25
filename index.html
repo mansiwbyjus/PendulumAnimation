@@ -1,35 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
-  <!DOCTYPE html>
-  <html lang="en">
-  <head>
-      <meta charset="UTF-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <title></title>
-      <link href='https://fonts.googleapis.com/css?family=Bebas Neue' rel='stylesheet'>
-      <link href="index.css" rel="stylesheet" type="text/css">
-  </head>
-  <body id="bodyId">
-      <div class="parent-div">
-        <div class="child-div">
+<!DOCTYPE html>
+<html lang="en">
 
-          <div class="slidecontainer" id="Lslider">
-            <p>Bob Length:</p>
-            <input type="range" id="bobLength" min="1" max="10" value="5" >
-          </div>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title></title>
+  <link href='https://fonts.googleapis.com/css?family=Bebas Neue' rel='stylesheet'>
+  <link href="index.css" rel="stylesheet" type="text/css">
+</head>
 
-          <div class="slidecontainer" id="Mslider">
-            <p>Bob Mass:</p>
-            <input type="range" id="bobMass" min="1" max="20" value="10">
-          </div>
-
-          <div class="center">
-            <canvas id="Canvas1"  style="border: 0px solid black;"></canvas>
-          </div> 
-
-        </div>
-      </div>   
-      <script src="script.js"></script>
+<body id="bodyId">
+  <div class="parent-div">
+    <div class="child-div">
       
-  </body>
-  </html>
+      <div class="sliders" style="border: 1px black;">
+        <div class="slidecontainer" id="Lslider">
+          <p>Bob Length</p>
+          <input class="range-slider__range" type="range" id="bobLength" value="5" min="1" max="10">
+          <span class="range-slider__value" id="bobLengthVal"></span>
+        </div>
+
+        <div class="slidecontainer" id="Mslider">
+          <p>Bob Mass</p>
+          <input class="range-slider__range" type="range" id="bobMass" value="10" min="1" max="20">
+          <span class="range-slider__value" id="bobMassValue"></span>
+        </div>
+      </div>
+      
+     
+    <div id="frequency"></div>
+
+      <div class="center">
+        <canvas id="Canvas1" style="border: 0px solid black;"></canvas>
+      </div>
+
+
+    </div>
+  </div>
+  <script src="script.js"></script>
+
+
+</body>
+
+</html>

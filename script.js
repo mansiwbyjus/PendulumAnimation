@@ -62,7 +62,8 @@ ctx1.fill();
 
 
 
-var bobLength = 7;
+
+var bobLength=7 ;
 var bobRadius = 10;
 var angle;
 var g = 9.8;
@@ -73,30 +74,38 @@ var theta;
 var f = 1 / T;
 var A;
 var bobPosX = 0;
-var bobPosY = -7;
+var bobPosY ;
 
-
+//Slider For Length
 var sliderL = document.getElementById("bobLength");
 sliderL.oninput = function () {
     bobLength = sliderL.value;
-    console.log(bobLength);
+    // console.log(bobLength);
     document.getElementById("bobLengthVal").innerHTML = bobLength;
+    //chart.destroy();
+    generateData("A*Math.cos(theta/2)", t, 10, 0.01);
+    
 }
 
+
+//Slider For Mass
 var sliderM = document.getElementById("bobMass");
 sliderM.oninput = function () {
     bobRadius = sliderM.value;
-    console.log(bobRadius);
+    //console.log(bobRadius);
     document.getElementById("bobMassValue").innerHTML = bobRadius;
 }
 
-
+//Slider For Theta0
 var sliderT = document.getElementById("theta");
 sliderT.oninput = function () {
     angle = sliderT.value;
-    console.log(angle);
+    //console.log(angle);
     document.getElementById("thetaValue").innerHTML = angle;
     theta0= degrees_to_radians(angle);
+    //chart.destroy();
+     generateData("A*Math.cos(theta/2)", t, 10, 0.01);
+    
 }
 
 function degrees_to_radians(degrees) {
